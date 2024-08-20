@@ -1,0 +1,12 @@
+require('danemasen.opts')
+require('danemasen.keymaps')
+require('danemasen.autocmds')
+require('danemasen.statusline')
+require('danemasen.tabline')
+require('danemasen.netrw')
+
+require('danemasen.plugins.paq')
+require('danemasen.plugins.treesitter')
+-- require('danemasen.plugins.gruvbox')
+require('danemasen.plugins.everforest')
+require('danemasen.plugins.gitsigns')
