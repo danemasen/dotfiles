@@ -24,7 +24,7 @@ alias cls='clear'
 alias ip='ip --color=always'
 alias less='less -R'
 alias tmux='tmux -2'
-alias play='mpv "$(fzf)"'
+alias play='mpv $(fd . ~/music/ --type file --color=always | fzf --ansi)'
 alias startwl='dwl -s "sh .wlinitrc"'
 
 eval "$(direnv hook bash)"
