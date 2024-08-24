@@ -30,4 +30,5 @@ alias tmux='tmux -2'
 alias play='mpv $(fd . ~/music/ --type file --color=always | fzf-tmux -p 90% --ansi)'
 alias startwl='dwl -s "sh .wlinitrc"'
 
+eval "$(fzf --bash)"
 eval "$(direnv hook bash)"
