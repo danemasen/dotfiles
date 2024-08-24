@@ -2,6 +2,7 @@
 
 source ~/.scripts/git-completion.bash
 source ~/.scripts/git-prompt.sh
+source ~/.scripts/bashmarks.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\n \e[1;34m\w\e[0m$(__git_ps1 " \e[1;33m(%s)\e[0m ")\n \e[1;32m\$\e[0m '
