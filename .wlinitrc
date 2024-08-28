@@ -1,0 +1,6 @@
+#!/bin/sh
+
+foot --server &
+wbg ~/pictures/wallpapers/fog_forest_1.png &
+transmission-daemon
+brightnessctl s 100%
