@@ -13,3 +13,5 @@ export FZF_DEFAULT_OPTS='--ansi'
 
 export HISTCONTROL='erasedups:ignorespace'
 export HISTSIZE=10
+
+export MOZ_ENABLE_WAYLAND=1
