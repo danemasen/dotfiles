@@ -28,6 +28,7 @@ alias ip='ip --color=always'
 alias less='less -R'
 alias tmux='tmux -2'
 alias play='mpv $(fd . ~/music/ --type file --color=always | fzf-tmux -p 90% --ansi)'
+alias ff='firefox-wayland &'
 alias startwl='dwl -s "sh .wlinitrc"'
 
 eval "$(fzf --bash)"
