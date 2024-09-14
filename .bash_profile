@@ -1,17 +1,14 @@
-[ -f ~/.bashrc ] && source ~/.bashrc
+# .bash_profile
+
+# Get the aliases and functions
+[ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 export XDG_RUNTIME_DIR=/tmp/xdg-runtime-$(id -u)
 mkdir -p $XDG_RUNTIME_DIR
 
-# export SDL_VIDEODRIVER=wayland
-
-export EDITOR=nvim
-
-export DOTNET_ROOT=$HOME/.dotnet-sdk
+export HISTSIZE=25
+export HISTCONTROL='erase-dups:ignorespace'
 
 export FZF_DEFAULT_OPTS='--ansi'
 
-export HISTCONTROL='erasedups:ignorespace'
-export HISTSIZE=10
-
-export MOZ_ENABLE_WAYLAND=1
+export DOTNET_ROOT=$HOME/.dotnet-sdk

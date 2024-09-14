@@ -1,35 +1,73 @@
-#!/bin/bash
+# .bashrc
 
-source ~/.scripts/git-completion.bash
-source ~/.scripts/git-prompt.sh
-source ~/.scripts/bashmarks.sh
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\n \e[1;34m\w\e[0m$(__git_ps1 " \e[1;33m(%s)\e[0m ")\n \e[1;32m\$\e[0m '
-
-set -o noclobber
-complete -cf doas
-
-rm() { command rm -i "${@}"; }
-cp() { command cp -i "${@}"; }
-mv() { command mv -i "${@}"; }
-
-alias ls='eza -F --color=always'
-alias la='eza -AF --color=always'
-alias ll='eza -lF --color=always --git'
-alias lla='eza -lAF --color=always --git --git-repos'
-alias lt='eza --tree'
-alias ltg='eza --tree --git'
+alias ls='ls -F --color=always'
+alias ll='ls -lF --color=always'
+alias la='ls -aF --color=always'
+alias lla='ls -laF --color=always'
+alias cls='clear'
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
-alias cls='clear'
 alias ip='ip --color=always'
 alias less='less -R'
 alias tmux='tmux -2'
-alias play='mpv $(fd . ~/music/ --type file --color=always | fzf-tmux -p 90% --ansi)'
-alias ff='firefox-wayland &'
 alias startwl='dwl -s "sh .wlinitrc"'
 
-eval "$(fzf --bash)"
-eval "$(direnv hook bash)"
+complete -cf doas
+complete -c man which
+
+set -o noclobber
+
+# get current branch in git repo
+function parse_git_branch() {
+	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		STAT=`parse_git_dirty`
+		echo "[${BRANCH}${STAT}]"
+	else
+		echo ""
+	fi
+}
+
+# get current status of git repo
+function parse_git_dirty {
+ status=`git status 2>&1 | tee`
+ dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
+ untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
+ ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+ newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
+ renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
+ deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
+ bits=''
+ if [ "${renamed}" == "0" ]; then
+  bits=">${bits}"
+ fi
+ if [ "${ahead}" == "0" ]; then
+  bits="*${bits}"
+ fi
+ if [ "${newfile}" == "0" ]; then
+  bits="+${bits}"
+ fi
+ if [ "${untracked}" == "0" ]; then
+  bits="?${bits}"
+ fi
+ if [ "${deleted}" == "0" ]; then
+  bits="x${bits}"
+ fi
+ if [ "${dirty}" == "0" ]; then
+  bits="!${bits}"
+ fi
+ if [ ! "${bits}" == "" ]; then
+  echo " ${bits}"
+ else
+  echo ""
+ fi
+}
+
+export PS1="\n \e[1;32m\u@\h\e[0m \e[1;33m\W\e[0m \e[1;34m\`parse_git_branch\`\e[0m\n \e[1;35m\$\e[0m "
+
+export HISTSIZE=25
