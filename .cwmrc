@@ -1,0 +1,14 @@
+command term st 
+command firefox firefox
+command blender blender
+
+borderwidth 2
+color activeborder "#a7c080"
+color inactiveborder "#3c4841"
+color selfont "#3c4841"
+color menubg "#272e33"
+color menufg "#d3c6aa"
+
+fontname "Iosevka Custom:size=13"
+
+snapdist 4
