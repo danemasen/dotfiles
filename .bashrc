@@ -69,5 +69,3 @@ function parse_git_dirty {
 }
 
 export PS1="\n \e[1;32m\u@\h\e[0m \e[1;33m\W\e[0m \e[1;34m\`parse_git_branch\`\e[0m\n \e[1;35m\$\e[0m "
-
-export HISTSIZE=25
