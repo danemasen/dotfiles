@@ -1,0 +1,5 @@
+[user]
+	email = contact@danemasen.com
+	name = danemasen
+[init]
+	defaultBranch = trunk
