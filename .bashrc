@@ -3,10 +3,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls -F --color=always'
-alias ll='ls -lF --color=always'
-alias la='ls -aF --color=always'
-alias lla='ls -laF --color=always'
+alias ls='eza -F --color=always'
+alias ll='eza -lF --color=always'
+alias la='eza -aF --color=always'
+alias lla='eza -laF --color=always'
 alias cls='clear'
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
