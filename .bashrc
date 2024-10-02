@@ -29,4 +29,6 @@ when
 
 export PS1="\n\[\033[01;32m\]\u@\h\[\033[0m\] \[\033[01;33m\]\W\[\033[0m\] \n\[\033[01;34m\]\$\[\033[0m\] "
 
+source ~/.scripts/fzf-git.sh
+
 eval "$(direnv hook bash)"
