@@ -7,7 +7,7 @@ export XDG_RUNTIME_DIR=/tmp/xdg-runtime-$(id -u)
 mkdir -p $XDG_RUNTIME_DIR
 
 export HISTSIZE=25
-export HISTCONTROL='erase-dups:ignorespace'
+export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
 
 export FZF_DEFAULT_OPTS='--ansi'
 
