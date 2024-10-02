@@ -29,14 +29,14 @@ when
 
 # get current branch in git repo
 function parse_git_branch() {
-	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-	if [ ! "${BRANCH}" == "" ]
-	then
-		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
-	else
-		echo ""
-	fi
+ BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+ if [ ! "${BRANCH}" == "" ]
+ then
+  STAT=`parse_git_dirty`
+  echo " ${BRANCH}${STAT}"
+ else
+  echo ""
+ fi
 }
 
 # get current status of git repo
@@ -74,7 +74,7 @@ function parse_git_dirty {
  fi
 }
 
-export PS1="\n\[\033[01;32m\]\u\[\033[01;37m\]@\[\033[0m\]\[\033[01;32m\]\h\[\033[0m\] \[\033[01;33m\]\W\[\033[0m\] \[\033[01;35m\]\`parse_git_branch\`\[\033[0m\] \n\[\033[01;34m\]\$\[\033[0m\] "
+export PS1="\n╭─ \[\033[01;32m\]\u\[\033[01;37m\]@\[\033[0m\]\[\033[01;32m\]\h\[\033[0m\] ─ \[\033[01;33m\]\W\[\033[0m\]  \[\033[01;35m\]\`parse_git_branch\`\[\033[0m\] \n╰─\[\033[01;34m\]  \[\033[0m\] "
 
 source ~/.scripts/fzf-git.sh
 
