@@ -13,7 +13,8 @@ require('nvim-treesitter.configs').setup({
   'lua',
   'html',
   'css',
-  'javascript'
+  'javascript',
+  'norg'
  },
  sync_install = true,
  auto_install = false,
