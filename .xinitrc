@@ -3,4 +3,5 @@ xrandr --output DP-1 --mode 2560x1440 --rate 165 --output HDMI-1 --mode 1920x108
 xwallpaper --maximize ~/Pictures/wallpapers/rock.jpg
 conky &
 picom -b
+redshift &
 exec dwm
