@@ -13,5 +13,6 @@ require 'paq' {
  'nvim-neotest/nvim-nio',
  'nvim-neorg/neorg',
  'nvim-tree/nvim-web-devicons',
- 'nvimdev/dashboard-nvim'
+ 'nvimdev/dashboard-nvim',
+ 'MeanderingProgrammer/render-markdown.nvim'
 }

@@ -14,6 +14,8 @@ require('nvim-treesitter.configs').setup({
   'html',
   'css',
   'javascript',
+  'markdown',
+  'markdown_inline',
   'norg'
  },
  sync_install = true,
