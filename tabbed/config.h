@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "Iosevka Custom:size=13";
+static const char font[]        = "Iosevka Nerd Font:size=14";
 static const char* normbgcolor  = "#2e373c";
 static const char* normfgcolor  = "#495156";
 static const char* selbgcolor   = "#272e33";

@@ -6,8 +6,8 @@ static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 8;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka Custom:size=13" };
-static const char dmenufont[]       = "Iosevka Custom:size=13";
+static const char *fonts[]          = { "Iosevka Nerd Font:size=13" };
+static const char dmenufont[]       = "Iosevka Nerd Font:size=13";
 static const char col_gray1[]       = "#272e33";
 static const char col_gray2[]       = "#374145";
 static const char col_gray3[]       = "#485156";
@@ -65,6 +65,8 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Insert, spawn,          SHCMD("xdotool type $(grep -v '^#' ~/Documents/bookmarks/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)") },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("scrot -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -99,7 +101,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_x,                      7)
 	TAGKEYS(                        XK_c,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
-	{ MODKEY,			XK_Insert, spawn,          SHCMD("xdotool type $(grep -v '^#' ~/Documents/bookmarks/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)") },
 };
 
 /* button definitions */
