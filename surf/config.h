@@ -120,7 +120,7 @@ static SiteSpecific certs[] = {
 	{ "://suckless\\.org/", "suckless.org.crt" },
 };
 
-#define MODKEY GDK_CONTROL_MASK
+#define MODKEY GDK_MOD1_MASK
 
 /* hotkeys */
 /*
@@ -191,3 +191,5 @@ static Button buttons[] = {
 	{ OnAny,        0,              9,      clicknavigate,  { .i = +1 },    1 },
 	{ OnMedia,      MODKEY,         1,      clickexternplayer, { 0 },       1 },
 };
+
+#define HOMEPAGE "https://danemasen.com"
