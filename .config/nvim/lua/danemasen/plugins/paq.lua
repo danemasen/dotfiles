@@ -8,11 +8,6 @@ require 'paq' {
  'sindrets/diffview.nvim',
  'ibhagwan/fzf-lua',
  'NeogitOrg/neogit',
- 'nvim-neorg/lua-utils.nvim',
- 'pysan3/pathlib.nvim',
- 'nvim-neotest/nvim-nio',
- 'nvim-neorg/neorg',
  'nvim-tree/nvim-web-devicons',
- 'nvimdev/dashboard-nvim',
  'MeanderingProgrammer/render-markdown.nvim'
 }
