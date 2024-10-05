@@ -59,7 +59,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
-static const char *termcmd[]  = { "tabbed", "-r", "2", "st", "-w", "''", NULL };
+// static const char *termcmd[]  = { "tabbed", "-r", "2", "st", "-w", "''", "-e", "tmux", NULL };
+static const char *termcmd[]  = { "st", "tmux", "new", "-A", "-s", "terminal", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
