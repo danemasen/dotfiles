@@ -7,3 +7,5 @@
 	s = status -sb
 	l = log --oneline --decorate --color --graph
 	last = log -1 HEAD --stat
+[core]
+	editor = nvim
