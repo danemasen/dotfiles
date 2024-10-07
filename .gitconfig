@@ -9,3 +9,4 @@
 	last = log -1 HEAD --stat
 [core]
 	editor = nvim
+	autocrlf = input
