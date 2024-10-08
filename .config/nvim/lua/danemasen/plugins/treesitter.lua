@@ -5,7 +5,7 @@ require('nvim-treesitter.configs').setup({
   'arduino',
   'vim',
   'vimdoc',
---  'perl',
+  'perl',
   'haskell',
   'nim',
   'zig',
