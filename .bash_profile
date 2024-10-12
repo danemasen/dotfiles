@@ -12,3 +12,7 @@ export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
 export FZF_DEFAULT_OPTS='--ansi'
 
 export DOTNET_ROOT=$HOME/.dotnet-sdk
+
+export CC=clang
+
+export EDITOR=nvim
