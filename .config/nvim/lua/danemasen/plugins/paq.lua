@@ -10,5 +10,6 @@ require 'paq' {
  'NeogitOrg/neogit',
  'f-person/git-blame.nvim',
  'nvim-tree/nvim-web-devicons',
- 'MeanderingProgrammer/render-markdown.nvim'
+ 'MeanderingProgrammer/render-markdown.nvim',
+ 'nvim-lualine/lualine.nvim'
 }
