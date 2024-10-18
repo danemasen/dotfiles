@@ -40,4 +40,4 @@ vim.opt.smartindent = false
 vim.cmd('filetype indent off')
 vim.cmd('filetype plugin indent off')
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes:2'

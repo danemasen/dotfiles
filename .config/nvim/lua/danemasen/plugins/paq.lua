@@ -15,5 +15,8 @@ require 'paq' {
  'nvim-neotest/nvim-nio',
  'MunifTanjim/nui.nvim',
  'pysan3/pathlib.nvim',
- 'nvim-neorg/neorg'
+ 'nvim-neorg/neorg',
+ 'nvim-telescope/telescope.nvim',
+ { 'ThePrimeagen/harpoon', branch = 'harpoon2' },
+ '2KAbhishek/markit.nvim'
 }
