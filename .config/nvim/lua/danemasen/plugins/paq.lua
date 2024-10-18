@@ -6,7 +6,6 @@ require 'paq' {
  'petertriho/nvim-scrollbar',
  'nvim-lua/plenary.nvim',
  'sindrets/diffview.nvim',
- 'ibhagwan/fzf-lua',
  'NeogitOrg/neogit',
  'f-person/git-blame.nvim',
  'nvim-tree/nvim-web-devicons',
