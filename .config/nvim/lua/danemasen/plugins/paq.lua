@@ -11,5 +11,10 @@ require 'paq' {
  'f-person/git-blame.nvim',
  'nvim-tree/nvim-web-devicons',
  'MeanderingProgrammer/render-markdown.nvim',
- 'nvim-lualine/lualine.nvim'
+ 'nvim-lualine/lualine.nvim',
+ 'nvim-neorg/lua-utils.nvim',
+ 'nvim-neotest/nvim-nio',
+ 'MunifTanjim/nui.nvim',
+ 'pysan3/pathlib.nvim',
+ 'nvim-neorg/neorg'
 }
