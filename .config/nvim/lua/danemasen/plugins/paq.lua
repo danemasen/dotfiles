@@ -18,5 +18,6 @@ require 'paq' {
  'nvim-neorg/neorg',
  'nvim-telescope/telescope.nvim',
  { 'ThePrimeagen/harpoon', branch = 'harpoon2' },
- '2KAbhishek/markit.nvim'
+ '2KAbhishek/markit.nvim',
+ 'vimwiki/vimwiki'
 }
